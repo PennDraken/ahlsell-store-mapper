@@ -1,51 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const tbody = document.querySelector("#inventoryTable tbody");
     const searchBar = document.getElementById("searchBar");
-
-
-    const resizer = document.getElementById("resizer");
     const sidebar = document.getElementById("sidebar");
     const mainContainer = document.querySelector("main");
 
-    let isResizing = false;
-
-    function debounce(func, delay) { // Used to debounce sidebar resizing
-        let timeout;
-        return (...args) => {
-            if (timeout) clearTimeout(timeout);
-            timeout = setTimeout(() => func(...args), delay);
-        };
-    }
-
-    resizer.addEventListener("mousedown", e => {
-        isResizing = true;
-        document.body.style.cursor = "col-resize";
-    });
-
-    const resizeSidebar = debounce((clientX) => {
-        const containerWidth = mainContainer.offsetWidth;
-        const newSidebarWidth = containerWidth - clientX;
-        // tbody.innerHTML = ""; // Remove while moving
-        if (newSidebarWidth > 150 && newSidebarWidth < containerWidth - 100) { // TODO remove hard coded magic values
-            sidebar.style.width = `${newSidebarWidth}px`;
-        }
-    }, 100);
-
-    document.addEventListener("mousemove", e => {
-        if (!isResizing) return;
-        resizeSidebar(e.clientX);
-    });
-
-    document.addEventListener("mouseup", () => {
-        if (isResizing) {
-            renderInventory()
-        }
-        isResizing = false;
-        document.body.style.cursor = "default";
-    });
-
     let currentFilter = "";
     let debounceTimeout = null;
+
     function renderInventory(filter = "") {
         const normalized = filter.toLowerCase();
 
@@ -58,10 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
             item.location.toLowerCase().includes(normalized)
         );
 
+        // Set of unique locations
+        // debugger
+        const uniqueLocations = new Set(results.map(item => inventoryShelfToShelfId(item.location.toUpperCase(), shelves)));
+        console.log(uniqueLocations)
+        drawShelfMap(uniqueLocations);
+
         // Render in background if idle, otherwise just use setTimeout
         const render = () => {
             const fragment = document.createDocumentFragment();
-
             for (const item of results) {
                 const row = document.createElement("tr");
                 row.innerHTML = `
