@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     color = colors.psu;
                 }
                 row.innerHTML = `
-                    <td id="location-cell" style=`background-color: {color};`>${item.location}</td>
+                    <td id="location-cell" style="background-color: ${color};">${item.location}</td>
                     <td id="name-cell">${item.name1}</td>
                     <td>${item.name2}</td>
                     <td>${item.article_number}</td>
