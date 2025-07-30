@@ -39,16 +39,17 @@ function drawShelfMap(activeShelves) {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
-    for (const polygon of areas) {
-        ctx.fillStyle = polygon.color;
-        drawPolygon(polygon.allPointsX, polygon.allPointsY);
-    }
-
     // Translate to the canvas centre before zooming - so you'll always zoom on what you're looking directly at
     ctx.translate(window.innerWidth / 2, window.innerHeight / 2)
     ctx.scale(cameraZoom, cameraZoom)
     ctx.translate(-window.innerWidth / 2 + cameraOffset.x, -window.innerHeight / 2 + cameraOffset.y)
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+
+    for (const polygon of areas) {
+        ctx.fillStyle = polygon.color;
+        drawPolygon(polygon.allPointsX, polygon.allPointsY);
+    }
+
     for (const rectangle of shelves) {
         if (activeShelves.has(rectangle.shelfId)) {
             ctx.fillStyle = "#999ddbff"
