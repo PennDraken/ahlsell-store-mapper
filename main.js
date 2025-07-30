@@ -31,13 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
             for (const item of results) {
                 const row = document.createElement("tr");
                 let color = "#b0a8d2ff";
-                if (item.location[0]==E) {
+                if (item.location[0]=="E") {
                     color = colors.el;
-                } else if (item.location[0]==M) {
+                } else if (item.location[0]=="M") {
                     color = colors.verktyg;
-                } else if (item.location[0]==V) {
+                } else if (item.location[0]=="V") {
                     color = colors.vvs;
-                } else if (item.location[0]==P) {
+                } else if (item.location[0]=="P") {
                     color = colors.psu;
                 }
                 row.innerHTML = `
