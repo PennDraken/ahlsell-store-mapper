@@ -39,6 +39,11 @@ function drawShelfMap(activeShelves) {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
+    ctx.fillStyle = "#787878ff"
+    for (const polygon of areas) {
+        drawPolygon(polygon.allPointsX, polygon.allPointsY);
+    }
+
     // Translate to the canvas centre before zooming - so you'll always zoom on what you're looking directly at
     ctx.translate(window.innerWidth / 2, window.innerHeight / 2)
     ctx.scale(cameraZoom, cameraZoom)
@@ -72,6 +77,21 @@ function getEventLocation(e) {
 
 function drawRect(x, y, width, height) {
     ctx.fillRect(x, y, width, height)
+}
+
+function drawPolygon(xPoints, yPoints) {
+    ctx.beginPath();
+    for (let i = 0; i <= xPoints.length; i++) {
+        const x = xPoints[i];
+        const y = yPoints[i];
+        if (i === 0) {
+            ctx.moveTo(x, y);
+        } else {
+            ctx.lineTo(x, y);
+        }
+    }
+    ctx.closePath();
+    ctx.fill();
 }
 
 function drawText(text, x, y, size, font) {
