@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const fragment = document.createDocumentFragment();
             for (const item of results) {
                 const row = document.createElement("tr");
-                let color = #b0a8d2ff;
+                let color = "#b0a8d2ff";
                 if (item.location[0]==E) {
                     color = colors.el;
                 } else if (item.location[0]==M) {
