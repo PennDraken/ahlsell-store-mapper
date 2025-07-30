@@ -39,8 +39,8 @@ function drawShelfMap(activeShelves) {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
-    ctx.fillStyle = "#787878ff"
     for (const polygon of areas) {
+        ctx.fillStyle = polygon.color;
         drawPolygon(polygon.allPointsX, polygon.allPointsY);
     }
 

@@ -3,22 +3,26 @@ const areas = [
     {
         "allPointsX": [402, 805, 806, 954, 956, 1092, 1090, 922, 921, 403],
         "allPointsY": [140, 141, 189, 191, 142, 141, 403, 405, 443, 443],
-        "name": "Värme & Sanitet"
+        "name": "Värme & Sanitet",
+        "color": "#504467ff"
     },
     {
         "allPointsX": [1325, 1175, 1177, 1090, 1088, 922, 921, 1090, 1091, 1325],
         "allPointsY": [154, 154, 138, 141, 405, 409, 586, 588, 706, 705],
-        "name": "El"
+        "name": "El",
+        "color": "#aa9b3cff"
     },
     {
         "allPointsX": [402, 405, 921, 922, 743, 741, 675, 556, 557],
         "allPointsY": [838, 442, 445, 685, 686, 796, 796, 797, 838],
-        "name": "Verktyg & Maskiner"
+        "name": "Verktyg & Maskiner",
+        "color": "#a52d2bff"
     },
     {
         "allPointsX": [921, 920, 1091, 1090, 1279, 1283, 1023, 1021],
         "allPointsY": [754, 586, 589, 707, 707, 838, 839, 754],
-        "name": "Skyddsutrustning"
+        "name": "Skyddsutrustning",
+        "color": "#207747ff"
     }
 ];
 
