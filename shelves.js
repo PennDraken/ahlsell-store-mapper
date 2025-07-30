@@ -1,8 +1,12 @@
 const colors = {
     "vvs": "#504467ff",
+    "vvsActive": "#8d7baeff",
     "el": "#8e8131ff",
+    "elActive": "#cece61ff",
     "verktyg": "#a52d2bff",
-    "psu": "#207747ff"
+    "verktygActive": "#fa8e8eff",
+    "psu": "#207747ff",
+    "psuActive": "#49cf85ff"
 }
 
 const areas = [
