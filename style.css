@@ -68,7 +68,7 @@ tr:hover {
 }
 
 #location-cell {
-    background-color: #4d4d4d;
+    /* background-color: #4d4d4d; */
     color: white;
     font-weight: bolder;
 }

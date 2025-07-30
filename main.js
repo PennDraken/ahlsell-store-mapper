@@ -30,8 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
             const fragment = document.createDocumentFragment();
             for (const item of results) {
                 const row = document.createElement("tr");
+                let color = #b0a8d2ff;
+                if (item.location[0]==E) {
+                    color = colors.el;
+                } else if (item.location[0]==M) {
+                    color = colors.verktyg;
+                } else if (item.location[0]==V) {
+                    color = colors.vvs;
+                } else if (item.location[0]==P) {
+                    color = colors.psu;
+                }
                 row.innerHTML = `
-                    <td id="location-cell">${item.location}</td>
+                    <td id="location-cell" style=`background-color: {color};`>${item.location}</td>
                     <td id="name-cell">${item.name1}</td>
                     <td>${item.name2}</td>
                     <td>${item.article_number}</td>
