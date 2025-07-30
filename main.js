@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td>${item.article_number}</td>
                     `;
                 fragment.appendChild(row);
-                if (fragment.childElementCount > 100) {
+                if (fragment.childElementCount > 300) {
                     break;
                 }
             }
