@@ -52,7 +52,7 @@ function drawShelfMap(activeShelves) {
 
     for (const rectangle of shelves) {
         if (activeShelves.has(rectangle.shelfId)) {
-            ctx.fillStyle = "#999ddbff"
+            ctx.fillStyle = "#ffffff98"
         } else {
             ctx.fillStyle = "#383838ff"
         }
