@@ -47,7 +47,8 @@ function drawShelfMap(activeShelves) {
 
     ctx.fillStyle = "#1a1a1aff";
     drawRect(storeFloor.x, storeFloor.y, storeFloor.width, storeFloor.height);
-    
+    drawRectOutline(storeFloor.x, storeFloor.y, storeFloor.width, storeFloor.height, "#c2c2c2ff", 3);
+
     for (const polygon of areas) {
         ctx.fillStyle = polygon.color;
         drawPolygon(polygon.allPointsX, polygon.allPointsY);
@@ -81,6 +82,12 @@ function getEventLocation(e) {
 
 function drawRect(x, y, width, height) {
     ctx.fillRect(x, y, width, height)
+}
+
+function drawRectOutline(x, y, width, height, color, lineWidth) {
+    ctx.strokeStyle = 'red';
+    ctx.lineWidth = 5;
+    ctx.strokeRect(x, y, width, height)
 }
 
 function drawPolygon(xPoints, yPoints) {
