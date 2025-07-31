@@ -85,8 +85,8 @@ function drawRect(x, y, width, height) {
 }
 
 function drawRectOutline(x, y, width, height, color, lineWidth) {
-    ctx.strokeStyle = 'red';
-    ctx.lineWidth = 5;
+    ctx.strokeStyle = color;
+    ctx.lineWidth = lineWidth;
     ctx.strokeRect(x, y, width, height)
 }
 
