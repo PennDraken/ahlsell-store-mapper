@@ -64,12 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     searchBar.addEventListener("input", () => {
         const value = searchBar.value;
-
-        clearTimeout(debounceTimeout);
-        debounceTimeout = setTimeout(() => {
-            currentFilter = value;
-            renderInventory(currentFilter);
-        }, 40);
+        currentFilter = value;
+        renderInventory(currentFilter);
     });
 
     renderInventory();
