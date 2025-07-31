@@ -46,7 +46,7 @@ function drawShelfMap(activeShelves) {
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
 
     ctx.fillStyle = "#464646";
-    drawRect(soreFloor.x, storeFloor.y, storeFloor.width, storeFloor.height);
+    drawRect(storeFloor.x, storeFloor.y, storeFloor.width, storeFloor.height);
     
     for (const polygon of areas) {
         ctx.fillStyle = polygon.color;
