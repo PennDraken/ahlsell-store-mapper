@@ -9,6 +9,13 @@ const colors = {
     "psuActive": "#49cf85ff"
 }
 
+const storeFloor = {
+    "x": 24,
+    "y": 13,
+    "width": 1307,
+    "height": 831
+}
+
 const areas = [
     // This is a list of polygons
     {
