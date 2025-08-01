@@ -22,13 +22,37 @@ document.addEventListener("DOMContentLoaded", () => {
         // Set of unique locations
         // debugger
         const uniqueLocations = new Set(results.map(item => inventoryShelfToShelfId(item.location.toUpperCase(), shelves)));
-        console.log(uniqueLocations)
         drawShelfMap(uniqueLocations);
 
         // Render in background if idle, otherwise just use setTimeout
         const render = () => {
             const fragment = document.createDocumentFragment();
+            let lastShelfLocation = null;
             for (const item of results) {
+                // Shelf number row
+                if (item.location !== lastShelfLocation) {
+                    const row = document.createElement("tr");
+                    let color = "#b0a8d2ff";
+                    if (item.location[0]=="E") {
+                        color = colors.el;
+                    } else if (item.location[0]=="M") {
+                        color = colors.verktyg;
+                    } else if (item.location[0]=="V") {
+                        color = colors.vvs;
+                    } else if (item.location[0]=="P") {
+                        color = colors.psu;
+                    }
+                    row.innerHTML = `
+                        <td id="shelfId-cell" style="background-color: ${color};">${item.location}</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        `;
+                    fragment.appendChild(row);
+                    lastShelfLocation = item.location;
+                }
+
+                // Product information row
                 const row = document.createElement("tr");
                 let color = "#b0a8d2ff";
                 if (item.location[0]=="E") {
