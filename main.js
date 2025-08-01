@@ -44,9 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                     row.innerHTML = `
                         <td id="shelfId-cell" style="background-color: ${color};">${item.location}</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                         `;
                     fragment.appendChild(row);
                     lastShelfLocation = item.location;
@@ -65,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     color = colors.psu;
                 }
                 row.innerHTML = `
-                    <td id="location-cell" style="background-color: ${color};">${item.location}</td>
+                    <td id="location-cell" style="background-color: ${color};">${" "}</td>
                     <td id="name-cell">${item.name1}</td>
                     <td>${item.name2}</td>
                     <td>${item.article_number}</td>
