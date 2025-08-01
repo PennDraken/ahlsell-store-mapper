@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         const rowsToHide = [...elementsToHide]; // Capture the current rows in a new array
                         lastShelfRow.addEventListener("click", (e) => {
                             for (const elem of rowsToHide) {
-                                if (elem.style.display === "none";) {
+                                if (elem.style.display === "none") {
                                     elem.style.display = "block";
                                 } else {
                                     elem.style.display = "none";
