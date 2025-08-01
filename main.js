@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         lastShelfRow.addEventListener("click", (e) => {
                             for (const elem of rowsToHide) {
                                 if (elem.style.display === "none") {
-                                    elem.style.display = "block";
+                                    elem.style.display = "table-row";
                                 } else {
                                     elem.style.display = "none";
                                 }
