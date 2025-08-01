@@ -30,50 +30,55 @@ document.addEventListener("DOMContentLoaded", () => {
             let lastShelfLocation = null;
             let lastShelfRow = null;
             let elementsToHide = [];
+            let elementsToHide = [];
+
             for (const item of results) {
                 // Shelf number row
                 if (item.location !== lastShelfLocation) {
-                    // Creating event listener to hide/ show elements beneath row
+                    // Attach event listener to previous shelf row
                     if (lastShelfRow !== null) {
+                        const rowsToHide = [...elementsToHide]; // Capture the current rows in a new array
                         lastShelfRow.addEventListener("click", (e) => {
-                            for (const elem of elementsToHide) {
-                                elem.style.display == "none"
+                            for (const elem of rowsToHide) {
+                                elem.style.display = "none";
                             }
-                            console.log(elementsToHide);
+                            console.log(rowsToHide);
                         });
-                        elementsToHide = [];
                     }
 
-                    // Creating new row
+                    // Create new shelf row
                     const row = document.createElement("tr");
                     let color = "#b0a8d2ff";
-                    if (item.location[0]=="E") {
+                    if (item.location[0] == "E") {
                         color = colors.el;
-                    } else if (item.location[0]=="M") {
+                    } else if (item.location[0] == "M") {
                         color = colors.verktyg;
-                    } else if (item.location[0]=="V") {
+                    } else if (item.location[0] == "V") {
                         color = colors.vvs;
-                    } else if (item.location[0]=="P") {
+                    } else if (item.location[0] == "P") {
                         color = colors.psu;
                     }
                     row.innerHTML = `
                         <td id="shelfId-cell" colspan="4" style="background-color: ${color};">${item.location}</td>
-                        `;
+                    `;
                     fragment.appendChild(row);
+
                     lastShelfLocation = item.location;
-                    lastShelfRow      = row;
+                    lastShelfRow = row;
+
+                    elementsToHide = []; // Reset for new shelf
                 }
 
                 // Product information row
                 const row = document.createElement("tr");
                 let color = "#b0a8d2ff";
-                if (item.location[0]=="E") {
+                if (item.location[0] == "E") {
                     color = colors.el;
-                } else if (item.location[0]=="M") {
+                } else if (item.location[0] == "M") {
                     color = colors.verktyg;
-                } else if (item.location[0]=="V") {
+                } else if (item.location[0] == "V") {
                     color = colors.vvs;
-                } else if (item.location[0]=="P") {
+                } else if (item.location[0] == "P") {
                     color = colors.psu;
                 }
                 row.innerHTML = `
@@ -81,9 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td id="name-cell">${item.name1}</td>
                     <td>${item.name2}</td>
                     <td>${item.article_number}</td>
-                    `;
+                `;
                 fragment.appendChild(row);
                 elementsToHide.push(row);
+
                 if (fragment.childElementCount > 300) {
                     break;
                 }
