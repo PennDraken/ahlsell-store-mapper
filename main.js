@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
             let lastShelfLocation = null;
             let lastShelfRow = null;
             let elementsToHide = [];
-            let elementsToHide = [];
 
             for (const item of results) {
                 // Shelf number row
