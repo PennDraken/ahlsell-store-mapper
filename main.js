@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             for (const elem of elementsToHide) {
                                 elem.style.display == "none"
                             }
+                            console.log(elementsToHide);
                         });
                         elementsToHide = [];
                     }
