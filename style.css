@@ -17,7 +17,7 @@ header {
 
 #searchBar {
   position: absolute;
-  width: 100%;
+  width: 50%;
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -41,7 +41,7 @@ main {
   max-height: 100vh;      /* Restrict sidebar height to viewport height */
   overflow-y: auto;       /* Enable vertical scroll if content is taller */
   position: fixed;        /* Optional: keep sidebar fixed on screen */
-  top: 100px;
+  top: 0px;
   right: 0;               /* Or left: 0, depending on layout */
   width: 50%;           /* Set sidebar width */
   background: white;      /* So it visually covers canvas */
