@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const fragment = document.createDocumentFragment();
             let lastShelfLocation = null;
             let lastShelfRow = null;
-            let elementsToHide = {};
+            let elementsToHide = [];
             for (const item of results) {
                 // Shelf number row
                 if (item.location !== lastShelfLocation) {
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 elem.style.display == "none"
                             }
                         });
-                        elementsToHide = {};
+                        elementsToHide = [];
                     }
 
                     // Creating new row
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td>${item.article_number}</td>
                     `;
                 fragment.appendChild(row);
-                // elementsToHide.push(row);
+                elementsToHide.push(row);
                 if (fragment.childElementCount > 300) {
                     break;
                 }
