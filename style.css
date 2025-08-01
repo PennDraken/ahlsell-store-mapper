@@ -78,6 +78,7 @@ tr:hover {
     color: white;
     font-weight: bolder;
     cursor: pointer;
+    border-top: 1px solid #ffffff;
 }
 
 #shelfId-cell:hover {
