@@ -71,6 +71,17 @@ tr:hover {
     /* background-color: #4d4d4d; */
     color: white;
     font-weight: bolder;
+    border-bottom: 0px;
+}
+
+#shelfId-cell {
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#shelfId-cell:hover {
+    color: white;
 }
 
 #name-cell {

@@ -28,9 +28,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const render = () => {
             const fragment = document.createDocumentFragment();
             let lastShelfLocation = null;
+            let lastShelfRow = null;
+            let elementsToHide = {};
             for (const item of results) {
                 // Shelf number row
                 if (item.location !== lastShelfLocation) {
+                    // Creating event listener to hide/ show elements beneath row
+                    if (lastShelfRow !== null) {
+                        lastShelfRow.addEventListener("click", {
+                            for (elem of elementsToHide) {
+                                elem.style.display == "none"
+                            }
+                        });
+                        elementsToHide = {};
+                    }
+
+                    // Creating new row
                     const row = document.createElement("tr");
                     let color = "#b0a8d2ff";
                     if (item.location[0]=="E") {
@@ -47,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         `;
                     fragment.appendChild(row);
                     lastShelfLocation = item.location;
+                    lastShelfRow      = row;
                 }
 
                 // Product information row
@@ -68,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td>${item.article_number}</td>
                     `;
                 fragment.appendChild(row);
+                elementsToHide.push(row);
                 if (fragment.childElementCount > 300) {
                     break;
                 }
