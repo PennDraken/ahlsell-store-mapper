@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (item.location !== lastShelfLocation) {
                     // Creating event listener to hide/ show elements beneath row
                     if (lastShelfRow !== null) {
-                        lastShelfRow.addEventListener("click", {
+                        lastShelfRow.addEventListener("click", (e) => {
                             for (const elem of elementsToHide) {
                                 elem.style.display == "none"
                             }
