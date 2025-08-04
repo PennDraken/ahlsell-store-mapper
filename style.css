@@ -68,29 +68,31 @@ tr:hover {
 }
 
 #location-cell {
-    /* background-color: #4d4d4d; */
-    color: white;
-    font-weight: bolder;
-    border-bottom: 0px;
+  /* background-color: #4d4d4d; */
+  color: white;
+  font-weight: bolder;
+  border-bottom: 0px;
 }
 
 #shelfId-cell {
-    color: white;
-    font-weight: bolder;
-    cursor: pointer;
-    border-top: 1px solid #ffffff;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  border-top: 1px solid #ffffff;
+  animation-duration: 100ms;
 }
 
 #shelfId-cell:hover {
-    color: white;
+  color: white;
+  filter: brightness(110%);
+  animation-duration: 100ms;
 }
 
 #name-cell {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-#canvas
-{
+#canvas {
   position: absolute;
   top: 0;
   left: 0;
@@ -98,3 +100,12 @@ tr:hover {
   height: 100%;
   background: #111;
 }
+
+/* Icons */
+.image-cell {
+            background-image:
+url('https://media.geeksforgeeks.org/wp-content/uploads/20210224040124/JSBinCollaborativeJavaScriptDebugging6-300x160.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+  }
