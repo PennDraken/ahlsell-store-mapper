@@ -1109,6 +1109,14 @@ const shelves = [
         "width": 24,
         "height": 380,
         "shelfId": "G"
+    },
+    // "{""name"":""rect"",""x"":63,""y"":809,""width"":311,""height"":26}","{""Hyllor"":""""}",
+    // X ends at 7 for the outdoor "shelf"
+    {
+        "x": -60,
+        "y": 13,
+        "width": 67,
+        "height":832,
+        "shelfId": "S"
     }
-    // "{""name"":""rect"",""x"":63,""y"":809,""width"":311,""height"":26}","{""Hyllor"":""""}"
 ];
