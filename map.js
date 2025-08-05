@@ -12,8 +12,18 @@ function inventoryShelfToShelfId(shelfIdString, shelves) {
     // Get shelf index from positions 1-3 (inclusive), and optional suffix from position 4
     const inputNumber = parseInt(shelfIdString.slice(1, 4), 10);
     const inputSuffix = shelfIdString[4] ?? null;
+    const firstLetter = shelfIdString[0];
 
     const shelfIds = shelves.map(s => s.shelfId);
+
+    // Check our special shelves
+    if (firstLetter in ["C", "D", "G"]) {
+        for (const id of shelfIds) {
+            if (firstLetter === id[0]) {
+                return id;
+            }
+        }
+    }
 
     // First try exact match using inputNumber + suffix if suffix exists
     const parsedId = inputSuffix ? `${inputNumber}${inputSuffix}` : `${inputNumber}`;
