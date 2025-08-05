@@ -17,7 +17,7 @@ function inventoryShelfToShelfId(shelfIdString, shelves) {
     const shelfIds = shelves.map(s => s.shelfId);
 
     // Check our special shelves
-    if (["C", "D", "G"].includes(firstLetter)) {
+    if (["C", "D", "G", "S"].includes(firstLetter)) {
         debugger;
         for (const id of shelfIds) {
             if (firstLetter === id[0]) {
