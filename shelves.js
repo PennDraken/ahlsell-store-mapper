@@ -1028,21 +1028,21 @@ const shelves = [
     {
         "x": 540,
         "y": 461,
-        "width": 12,
+        "width": 15,
         "height": 22,
         "shelfId": "50"
     },
     {
         "x": 776,
         "y": 452,
-        "width": 14,
+        "width": 15,
         "height": 22,
         "shelfId": "34G"
     },
     {
         "x": 772,
         "y": 498,
-        "width": 16,
+        "width": 15,
         "height": 26,
         "shelfId": "33G"
     },
@@ -1056,7 +1056,7 @@ const shelves = [
     {
         "x": 774,
         "y": 597,
-        "width": 16,
+        "width": 15,
         "height": 27,
         "shelfId": "31G"
     },
@@ -1066,5 +1066,49 @@ const shelves = [
         "width": 15,
         "height": 27,
         "shelfId": "30G"
+    },
+    // VA-Hyllor
+    {
+        "x": 380,
+        "y": 307,
+        "width": 24,
+        "height": 436,
+        "shelfId": "C"
+    },
+    {
+        "x": 286,
+        "y": 238,
+        "width": 24,
+        "height": 505,
+        "shelfId": "C"
+    },
+    {
+        "x": 263,
+        "y": 300,
+        "width": 24,
+        "height": 443,
+        "shelfId": "D"
+    },
+    {
+        "x": 148,
+        "y": 359,
+        "width": 24,
+        "height": 384,
+        "shelfId": "D"
+    },
+    {
+        "x": 34,
+        "y": 361,
+        "width": 24,
+        "height": 373,
+        "shelfId": "G"
+    },
+    {
+        "x": 123,
+        "y": 361,
+        "width": 24,
+        "height": 380,
+        "shelfId": "G"
     }
+    // "{""name"":""rect"",""x"":63,""y"":809,""width"":311,""height"":26}","{""Hyllor"":""""}"
 ];
