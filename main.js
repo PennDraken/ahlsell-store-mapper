@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td id="location-cell" style="background-color: ${color};">${" "}</td>
                     <td id="name-cell">${item.name1}</td>
                     <td>${item.name2}</td>
-                    <td>${item.article_number}</td>
+                    <td id="article-number-cell">${item.article_number}</td>
                 `;
                 fragment.appendChild(row);
                 elementsToHide.push(row);

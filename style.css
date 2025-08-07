@@ -109,3 +109,11 @@ url('https://media.geeksforgeeks.org/wp-content/uploads/20210224040124/JSBinColl
             background-position: center;
             background-repeat: no-repeat;
   }
+
+#article-number-cell {
+  cursor: copy;
+}
+
+#article-number-cell:hover {
+  font-weight: bold;
+}
