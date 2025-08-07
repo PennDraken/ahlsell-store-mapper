@@ -90,6 +90,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td>${item.name2}</td>
                     <td id="article-number-cell">${item.article_number}</td>
                 `;
+                const articleNumberCell = row.querySelector("#article-number-cell");
+                articleNumberCell.addEventListener("click", (e) => {
+                    navigator.clipboard.writeText(item.article_number);
+                });
+
                 fragment.appendChild(row);
                 elementsToHide.push(row);
 
