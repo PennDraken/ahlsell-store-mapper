@@ -121,3 +121,7 @@ url('https://media.geeksforgeeks.org/wp-content/uploads/20210224040124/JSBinColl
 #article-number-cell:active {
   cursor: copy;
 }
+
+#name-cell {
+  cursor: pointer;
+}
