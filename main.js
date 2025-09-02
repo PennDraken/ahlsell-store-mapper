@@ -94,6 +94,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 articleNumberCell.addEventListener("click", (e) => {
                     navigator.clipboard.writeText(item.article_number);
                 });
+                const articleNameCell = row.querySelector("#name-cell");
+                articleNameCell.addEventListener("click", (e) => {
+                    window.open("https://www.ahlsell.se/products/" + item.article_number, "_blank");
+                });
 
                 fragment.appendChild(row);
                 elementsToHide.push(row);
