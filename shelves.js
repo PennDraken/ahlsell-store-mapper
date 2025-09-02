@@ -370,98 +370,98 @@ const shelves = [
     {
         "x": 1126,
         "y": 255,
-        "width": 157,
+        "width": 160,
         "height": 11,
         "shelfId": "64V"
     },
     {
         "x": 1126,
         "y": 265,
-        "width": 159,
+        "width": 160,
         "height": 15,
         "shelfId": "65H"
     },
     {
         "x": 1126,
         "y": 315,
-        "width": 150,
+        "width": 160,
         "height": 22,
         "shelfId": "66V"
     },
     {
         "x": 1126,
         "y": 336,
-        "width": 148,
+        "width": 160,
         "height": 18,
         "shelfId": "66H"
     },
     {
         "x": 1126,
         "y": 391,
-        "width": 163,
+        "width": 160,
         "height": 15,
         "shelfId": "67V"
     },
     {
         "x": 1126,
         "y": 403,
-        "width": 164,
+        "width": 160,
         "height": 13,
         "shelfId": "68H"
     },
     {
         "x": 1126,
         "y": 453,
-        "width": 159,
+        "width": 160,
         "height": 13,
         "shelfId": "69V"
     },
     {
         "x": 1126,
         "y": 465,
-        "width": 161,
+        "width": 160,
         "height": 11,
         "shelfId": "69H"
     },
     {
         "x": 1126,
         "y": 501,
-        "width": 161,
+        "width": 160,
         "height": 11,
         "shelfId": "70V"
     },
     {
         "x": 1126,
         "y": 513,
-        "width": 159,
+        "width": 160,
         "height": 10,
         "shelfId": "70H"
     },
     {
         "x": 1126,
         "y": 559,
-        "width": 157,
+        "width": 160,
         "height": 13,
         "shelfId": "71V"
     },
     {
         "x": 1126,
         "y": 570,
-        "width": 156,
+        "width": 160,
         "height": 14,
         "shelfId": "72H"
     },
     {
         "x": 1126,
         "y": 639,
-        "width": 149,
+        "width": 160,
         "height": 18,
         "shelfId": "73H"
     },
     {
         "x": 1126,
         "y": 622,
-        "width": 147,
+        "width": 160,
         "height": 17,
         "shelfId": "73V"
     },
@@ -475,91 +475,91 @@ const shelves = [
     {
         "x": 1054,
         "y": 139,
-        "width": 14,
+        "width": 12,
         "height": 81,
         "shelfId": "10H"
     },
     {
         "x": 991,
         "y": 141,
-        "width": 10,
+        "width": 12,
         "height": 79,
         "shelfId": "9V"
     },
     {
         "x": 775,
         "y": 139,
-        "width": 9,
+        "width": 12,
         "height": 81,
         "shelfId": "8H"
     },
     {
         "x": 762,
         "y": 140,
-        "width": 11,
+        "width": 12,
         "height": 82,
         "shelfId": "8V"
     },
     {
         "x": 725,
         "y": 140,
-        "width": 13,
+        "width": 12,
         "height": 83,
         "shelfId": "7H"
     },
     {
         "x": 713,
         "y": 141,
-        "width": 10,
+        "width": 12,
         "height": 82,
         "shelfId": "7V"
     },
     {
         "x": 1043,
         "y": 140,
-        "width": 14,
+        "width": 12,
         "height": 79,
         "shelfId": "10V"
     },
     {
         "x": 1003,
         "y": 139,
-        "width": 11,
+        "width": 12,
         "height": 81,
         "shelfId": "9H"
     },
     {
         "x": 677,
         "y": 142,
-        "width": 11,
+        "width": 12,
         "height": 78,
         "shelfId": "6H"
     },
     {
         "x": 665,
         "y": 139,
-        "width": 13,
+        "width": 12,
         "height": 81,
         "shelfId": "6V"
     },
     {
         "x": 627,
         "y": 139,
-        "width": 13,
+        "width": 12,
         "height": 83,
         "shelfId": "5H"
     },
     {
         "x": 616,
         "y": 140,
-        "width": 11,
+        "width": 12,
         "height": 83,
         "shelfId": "5V"
     },
     {
         "x": 579,
         "y": 141,
-        "width": 13,
+        "width": 12,
         "height": 81,
         "shelfId": "4H"
     },
@@ -573,42 +573,42 @@ const shelves = [
     {
         "x": 531,
         "y": 141,
-        "width": 11,
+        "width": 12,
         "height": 81,
         "shelfId": "3H"
     },
     {
         "x": 517,
         "y": 142,
-        "width": 15,
+        "width": 12,
         "height": 81,
         "shelfId": "3V"
     },
     {
         "x": 470,
         "y": 142,
-        "width": 11,
+        "width": 12,
         "height": 78,
         "shelfId": "2V"
     },
     {
         "x": 481,
         "y": 141,
-        "width": 10,
+        "width": 12,
         "height": 79,
         "shelfId": "2H"
     },
     {
         "x": 432,
         "y": 140,
-        "width": 10,
+        "width": 12,
         "height": 83,
         "shelfId": "1H"
     },
     {
         "x": 420,
         "y": 140,
-        "width": 11,
+        "width": 12,
         "height": 82,
         "shelfId": "1V"
     },
