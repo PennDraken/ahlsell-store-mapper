@@ -37,8 +37,8 @@ const areas = [
         "color": colors.verktyg
     },
     {
-        "allPointsX": [921, 920, 1091, 1090, 1279, 1283, 1023, 1021],
-        "allPointsY": [754, 586, 589, 707, 707, 838, 839, 754],
+        "allPointsX": [920, 920, 1090, 1090, 1279, 1283, 1023, 1021],
+        "allPointsY": [754, 586, 589, 707, 707, 839, 839, 754],
         "name": "Skyddsutrustning",
         "color": colors.psu
     }
@@ -53,7 +53,7 @@ const shelves = [
         "shelfId": "40H"
     },
     {
-        "x": 577,
+        "x": 578,
         "y": 708,
         "width": 120,
         "height": 10,
@@ -67,35 +67,35 @@ const shelves = [
         "shelfId": "39V"
     },
     {
-        "x": 577,
+        "x": 578,
         "y": 648,
         "width": 120,
         "height": 10,
         "shelfId": "39H"
     },
     {
-        "x": 577,
+        "x": 578,
         "y": 611,
         "width": 118,
         "height": 12,
         "shelfId": "38V"
     },
     {
-        "x": 576,
+        "x": 578,
         "y": 599,
         "width": 121,
         "height": 11,
         "shelfId": "38H"
     },
     {
-        "x": 577,
+        "x": 578,
         "y": 561,
         "width": 120,
         "height": 14,
         "shelfId": "37V"
     },
     {
-        "x": 576,
+        "x": 578,
         "y": 549,
         "width": 121,
         "height": 12,
@@ -109,7 +109,7 @@ const shelves = [
         "shelfId": "36V"
     },
     {
-        "x": 577,
+        "x": 578,
         "y": 501,
         "width": 120,
         "height": 12,
@@ -130,14 +130,14 @@ const shelves = [
         "shelfId": "35H"
     },
     {
-        "x": 576,
+        "x": 578,
         "y": 404,
         "width": 121,
         "height": 13,
         "shelfId": "19V"
     },
     {
-        "x": 576,
+        "x": 578,
         "y": 392,
         "width": 122,
         "height": 15,
@@ -158,7 +158,7 @@ const shelves = [
         "shelfId": "30V"
     },
     {
-        "x": 788,
+        "x": 790,
         "y": 599,
         "width": 121,
         "height": 11,
@@ -172,56 +172,56 @@ const shelves = [
         "shelfId": "31H"
     },
     {
-        "x": 789,
+        "x": 790,
         "y": 559,
         "width": 117,
         "height": 16,
         "shelfId": "32H"
     },
     {
-        "x": 789,
+        "x": 790,
         "y": 549,
         "width": 119,
         "height": 9,
         "shelfId": "32V"
     },
     {
-        "x": 788,
+        "x": 790,
         "y": 513,
         "width": 121,
         "height": 11,
         "shelfId": "33H"
     },
     {
-        "x": 787,
+        "x": 790,
         "y": 501,
         "width": 123,
         "height": 12,
         "shelfId": "33V"
     },
     {
-        "x": 788,
+        "x": 790,
         "y": 463,
         "width": 119,
         "height": 13,
         "shelfId": "34H"
     },
     {
-        "x": 788,
+        "x": 790,
         "y": 452,
         "width": 119,
         "height": 11,
         "shelfId": "34V"
     },
     {
-        "x": 789,
+        "x": 790,
         "y": 403,
         "width": 118,
         "height": 13,
         "shelfId": "18H"
     },
     {
-        "x": 789,
+        "x": 790,
         "y": 393,
         "width": 119,
         "height": 11,
@@ -361,14 +361,14 @@ const shelves = [
         "shelfId": "91"
     },
     {
-        "x": 1270,
+        "x": 1126,
         "y": 723,
         "width": 10,
         "height": 43,
         "shelfId": "91"
     },
     {
-        "x": 1127,
+        "x": 1126,
         "y": 255,
         "width": 157,
         "height": 11,
@@ -389,28 +389,28 @@ const shelves = [
         "shelfId": "66V"
     },
     {
-        "x": 1127,
+        "x": 1126,
         "y": 336,
         "width": 148,
         "height": 18,
         "shelfId": "66H"
     },
     {
-        "x": 1123,
+        "x": 1126,
         "y": 391,
         "width": 163,
         "height": 15,
         "shelfId": "67V"
     },
     {
-        "x": 1123,
+        "x": 1126,
         "y": 403,
         "width": 164,
         "height": 13,
         "shelfId": "68H"
     },
     {
-        "x": 1127,
+        "x": 1126,
         "y": 453,
         "width": 159,
         "height": 13,
@@ -438,28 +438,28 @@ const shelves = [
         "shelfId": "70H"
     },
     {
-        "x": 1127,
+        "x": 1126,
         "y": 559,
         "width": 157,
         "height": 13,
         "shelfId": "71V"
     },
     {
-        "x": 1127,
+        "x": 1126,
         "y": 570,
         "width": 156,
         "height": 14,
         "shelfId": "72H"
     },
     {
-        "x": 1125,
+        "x": 1126,
         "y": 639,
         "width": 149,
         "height": 18,
         "shelfId": "73H"
     },
     {
-        "x": 1128,
+        "x": 1126,
         "y": 622,
         "width": 147,
         "height": 17,
