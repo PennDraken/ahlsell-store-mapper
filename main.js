@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     color = colors.psu;
                 }
                 row.innerHTML = `
-                    <td id="shelfId-cell" colspan="4" style="background-color: ${color};">${item.location}</td>
+                    <td id="shelfId-cell" colspan="5" style="background-color: ${color};">${item.location}</td>
                 `;
                 fragment.appendChild(row);
 
