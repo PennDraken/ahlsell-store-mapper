@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         // Set of unique locations
-        // debugger
         const uniqueLocations = new Set(results.map(item => inventoryShelfToShelfId(item.location.toUpperCase(), shelves)));
         drawShelfMap(uniqueLocations);
 

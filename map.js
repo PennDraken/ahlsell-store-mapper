@@ -18,7 +18,6 @@ function inventoryShelfToShelfId(shelfIdString, shelves) {
 
     // Check our special shelves
     if (["C", "D", "G", "S"].includes(firstLetter)) {
-        debugger;
         for (const id of shelfIds) {
             if (firstLetter === id[0]) {
                 return id;
