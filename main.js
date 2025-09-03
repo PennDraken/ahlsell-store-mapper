@@ -110,16 +110,15 @@ document.addEventListener("DOMContentLoaded", () => {
             tbody.appendChild(fragment);
         };
 
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(render);
-        } else {
-            setTimeout(render, 0);
-        }
+        // if ('requestIdleCallback' in window) {
+        //     requestIdleCallback(render);
+        // } else {
+        //     setTimeout(render, 0);
+        // }
     }
 
     searchBar.addEventListener("input", () => {
-        const value = searchBar.value;
-        currentFilter = value;
+        const currentFilter = searchBar.value;
         renderInventory(currentFilter);
     });
 
