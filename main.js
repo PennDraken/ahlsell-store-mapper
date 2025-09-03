@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
             item.location.toLowerCase().includes(normalized)
         );
 
-        // Render in background if idle, otherwise just use setTimeout
         const render = () => {
             const fragment = document.createDocumentFragment();
 
@@ -39,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td>${item.article_number}</td>
                     `;
                 fragment.appendChild(row);
-                if (fragment.childElementCount > 100) {
+                if (fragment.childElementCount > 100) { // Limit search results (avoid loading entire database) TODO allow user to search for more items
                     break;
                 }
             }
@@ -47,22 +46,17 @@ document.addEventListener("DOMContentLoaded", () => {
             tbody.appendChild(fragment);
         };
 
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(render);
-        } else {
-            setTimeout(render, 0);
-        }
+        // if ('requestIdleCallback' in window) {
+        //     requestIdleCallback(render);
+        // } else {
+        //     setTimeout(render, 0);
+        // }
     }
 
     searchBar.addEventListener("input", () => {
-        const value = searchBar.value;
-
-        clearTimeout(debounceTimeout);
-        debounceTimeout = setTimeout(() => {
-            currentFilter = value;
-            renderInventory(currentFilter);
-        }, 40);
+        const currentFilter = searchBar.value;
+        renderInventory(currentFilter);
     });
 
-    renderInventory();
+    renderInventory(); // Initial population of articles
 });
