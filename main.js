@@ -7,6 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentFilter = "";
     let debounceTimeout = null;
 
+    function getImageURL(article_number) {
+        // Example URL calls. Note many articles will not show up using this method.
+        // https://www.ahlsell.se/external-assets/JPEGlarge800_800/25/16/ProductImage75172516.jpg?preset=medium
+        // https://www.ahlsell.se/external-assets/JPEGlarge800_800/_5/66/7201_1_566.jpg?preset=medium
+        const lastDigitsPart1 = article_number.substring(article_number.length - 4, article_number.length - 2)
+        const lastDigitsPart2 = article_number.substring(article_number.length - 2, article_number.length)
+        return "https://www.ahlsell.se/external-assets/JPEGlarge800_800/" + lastDigitsPart1 + "/" + lastDigitsPart2 + "/ProductImage" + article_number + ".jpg?preset=medium"
+    }
+
     function renderInventory(filter = "") {
         const normalized = filter.toLowerCase();
 
@@ -82,8 +91,10 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if (item.location[0] == "P") {
                 color = colors.psu;
             }
+            const imageURL = getImageURL(article_number);
             row.innerHTML = `
                 <td id="location-cell" style="background-color: ${color};">${" "}</td>
+                <td><img src="${imageURL}" alt="" border=3 height=30></img></th>
                 <td id="name-cell">${item.name1}</td>
                 <td>${item.name2}</td>
                 <td id="article-number-cell">${item.article_number}</td>
@@ -106,12 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         tbody.appendChild(fragment);
-
-        // if ('requestIdleCallback' in window) {
-        //     requestIdleCallback(render);
-        // } else {
-        //     setTimeout(render, 0);
-        // }
     }
 
     searchBar.addEventListener("input", () => {
