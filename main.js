@@ -24,54 +24,30 @@ document.addEventListener("DOMContentLoaded", () => {
         drawShelfMap(uniqueLocations);
 
         // Render in background if idle, otherwise just use setTimeout
-        const render = () => {
-            const fragment = document.createDocumentFragment();
-            let lastShelfLocation = null;
-            let lastShelfRow = null;
-            let elementsToHide = [];
+        const fragment = document.createDocumentFragment();
+        let lastShelfLocation = null;
+        let lastShelfRow = null;
+        let elementsToHide = [];
 
-            for (const item of results) {
-                // Shelf number row
-                if (item.location !== lastShelfLocation) {
-                    // Attach event listener to previous shelf row
-                    if (lastShelfRow !== null) {
-                        const rowsToHide = [...elementsToHide]; // Capture the current rows in a new array
-                        lastShelfRow.addEventListener("click", (e) => {
-                            for (const elem of rowsToHide) {
-                                if (elem.style.display === "none") {
-                                    elem.style.display = "table-row";
-                                } else {
-                                    elem.style.display = "none";
-                                }
+        for (const item of results) {
+            // Shelf number row
+            if (item.location !== lastShelfLocation) {
+                // Attach event listener to previous shelf row
+                if (lastShelfRow !== null) {
+                    const rowsToHide = [...elementsToHide]; // Capture the current rows in a new array
+                    lastShelfRow.addEventListener("click", (e) => {
+                        for (const elem of rowsToHide) {
+                            if (elem.style.display === "none") {
+                                elem.style.display = "table-row";
+                            } else {
+                                elem.style.display = "none";
                             }
-                            console.log(rowsToHide);
-                        });
-                    }
-
-                    // Create new shelf row
-                    const row = document.createElement("tr");
-                    let color = "#b0a8d2ff";
-                    if (item.location[0] == "E") {
-                        color = colors.el;
-                    } else if (item.location[0] == "M") {
-                        color = colors.verktyg;
-                    } else if (item.location[0] == "V") {
-                        color = colors.vvs;
-                    } else if (item.location[0] == "P") {
-                        color = colors.psu;
-                    }
-                    row.innerHTML = `
-                        <td id="shelfId-cell" colspan="4" style="background-color: ${color};">${item.location}</td>
-                    `;
-                    fragment.appendChild(row);
-
-                    lastShelfLocation = item.location;
-                    lastShelfRow = row;
-
-                    elementsToHide = []; // Reset for new shelf
+                        }
+                        console.log(rowsToHide);
+                    });
                 }
 
-                // Product information row
+                // Create new shelf row
                 const row = document.createElement("tr");
                 let color = "#b0a8d2ff";
                 if (item.location[0] == "E") {
@@ -84,30 +60,52 @@ document.addEventListener("DOMContentLoaded", () => {
                     color = colors.psu;
                 }
                 row.innerHTML = `
-                    <td id="location-cell" style="background-color: ${color};">${" "}</td>
-                    <td id="name-cell">${item.name1}</td>
-                    <td>${item.name2}</td>
-                    <td id="article-number-cell">${item.article_number}</td>
+                    <td id="shelfId-cell" colspan="4" style="background-color: ${color};">${item.location}</td>
                 `;
-                const articleNumberCell = row.querySelector("#article-number-cell");
-                articleNumberCell.addEventListener("click", (e) => {
-                    navigator.clipboard.writeText(item.article_number);
-                });
-                const articleNameCell = row.querySelector("#name-cell");
-                articleNameCell.addEventListener("click", (e) => {
-                    window.open("https://www.ahlsell.se/products/" + item.article_number, "_blank");
-                });
-
                 fragment.appendChild(row);
-                elementsToHide.push(row);
 
-                if (fragment.childElementCount > 300) {
-                    break;
-                }
+                lastShelfLocation = item.location;
+                lastShelfRow = row;
+
+                elementsToHide = []; // Reset for new shelf
             }
 
-            tbody.appendChild(fragment);
-        };
+            // Product information row
+            const row = document.createElement("tr");
+            let color = "#b0a8d2ff";
+            if (item.location[0] == "E") {
+                color = colors.el;
+            } else if (item.location[0] == "M") {
+                color = colors.verktyg;
+            } else if (item.location[0] == "V") {
+                color = colors.vvs;
+            } else if (item.location[0] == "P") {
+                color = colors.psu;
+            }
+            row.innerHTML = `
+                <td id="location-cell" style="background-color: ${color};">${" "}</td>
+                <td id="name-cell">${item.name1}</td>
+                <td>${item.name2}</td>
+                <td id="article-number-cell">${item.article_number}</td>
+            `;
+            const articleNumberCell = row.querySelector("#article-number-cell");
+            articleNumberCell.addEventListener("click", (e) => {
+                navigator.clipboard.writeText(item.article_number);
+            });
+            const articleNameCell = row.querySelector("#name-cell");
+            articleNameCell.addEventListener("click", (e) => {
+                window.open("https://www.ahlsell.se/products/" + item.article_number, "_blank");
+            });
+
+            fragment.appendChild(row);
+            elementsToHide.push(row);
+
+            if (fragment.childElementCount > 300) {
+                break;
+            }
+        }
+
+        tbody.appendChild(fragment);
 
         // if ('requestIdleCallback' in window) {
         //     requestIdleCallback(render);
