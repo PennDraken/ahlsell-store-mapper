@@ -2,16 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const tbody = document.querySelector("#inventoryTable tbody");
     const searchBar = document.getElementById("searchBar");
 
-    const mainContainer = document.querySelector("main");
-
-    function debounce(func, delay) { // Used to debounce sidebar resizing
-        let timeout;
-        return (...args) => {
-            if (timeout) clearTimeout(timeout);
-            timeout = setTimeout(() => func(...args), delay);
-        };
-    }
-
     let currentFilter = "";
     let debounceTimeout = null;
     function renderInventory(filter = "") {
@@ -45,12 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             tbody.appendChild(fragment);
         };
-
-        // if ('requestIdleCallback' in window) {
-        //     requestIdleCallback(render);
-        // } else {
-        //     setTimeout(render, 0);
-        // }
     }
 
     searchBar.addEventListener("input", () => {
