@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const imageURL = getImageURL(item.article_number);
             row.innerHTML = `
                 <td id="location-cell" style="background-color: ${color};">${" "}</td>
-                <td><img src="${imageURL}" alt="" border=3 height=30></img></th>
+                <td><img src="${imageURL}" alt="" width=100></img></th>
                 <td id="name-cell">${item.name1}</td>
                 <td>${item.name2}</td>
                 <td id="article-number-cell">${item.article_number}</td>
