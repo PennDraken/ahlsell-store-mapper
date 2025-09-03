@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if (item.location[0] == "P") {
                 color = colors.psu;
             }
-            const imageURL = getImageURL(article_number);
+            const imageURL = getImageURL(item.article_number);
             row.innerHTML = `
                 <td id="location-cell" style="background-color: ${color};">${" "}</td>
                 <td><img src="${imageURL}" alt="" border=3 height=30></img></th>
