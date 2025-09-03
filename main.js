@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // https://www.ahlsell.se/external-assets/JPEGlarge800_800/_5/66/7201_1_566.jpg?preset=medium
         const lastDigitsPart1 = article_number.substring(article_number.length - 4, article_number.length - 2)
         const lastDigitsPart2 = article_number.substring(article_number.length - 2, article_number.length)
-        return "https://www.ahlsell.se/external-assets/JPEGlarge800_800/" + lastDigitsPart1 + "/" + lastDigitsPart2 + "/ProductImage" + article_number + ".jpg?preset=medium"
+        // return "https://www.ahlsell.se/external-assets/JPEGlarge800_800/" + lastDigitsPart1 + "/" + lastDigitsPart2 + "/ProductImage" + article_number + ".jpg?preset=medium"
+        return "https://www.ahlsell.se/external-assets/JPEGlarge800_800/" + lastDigitsPart1 + "/" + lastDigitsPart2 + "/" + article_number + ".jpg?preset=medium"
     }
 
     function renderInventory(filter = "") {
