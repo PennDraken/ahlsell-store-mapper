@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
             fragment.appendChild(row);
             elementsToHide.push(row);
 
-            if (fragment.childElementCount > 300) {
+            if (fragment.childElementCount > 100) {
                 break;
             }
         }
